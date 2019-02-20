@@ -1,9 +1,26 @@
 #include <stdio.h>
-#include <stdlib.h>
-
 int main()
 {
-    int a[3][4]={ 1,2,3,4,5,6,7,8,9,10,13,12};
+    int n, reversedInteger = 0, remainder, originalInteger;
 
-    printf("%u \n %u \n %u",a[0]+1,*(a[0]+1),*(*(a+0)+1));
+    printf("Enter an integer: ");
+    scanf("%s", &n);
+
+    originalInteger = n
+
+    // reversed integer is stored in variable 
+    while( n!=0 )
+    {
+        remainder = n%10;
+        reversedInteger = reversedInteger*10 + remainder;
+        n /= 10;
+    }
+
+    // palindrome if orignalInteger and reversedInteger are equal
+    if (originalInteger == reversedInteger)
+        printf("%d is a palindrome.", originalInteger);
+    else
+        printf("%d is not a palindrome.", originalInteger);
+    
+    return 0;
 }
